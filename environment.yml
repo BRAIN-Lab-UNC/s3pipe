@@ -1,0 +1,13 @@
+name: s3env
+dependencies:
+  - numpy
+  - python=3.9
+  - pip
+  - scipy
+  - conda-forge::pyvista
+  - conda-forge::vtk
+  - conda-forge::tensorboard
+  - conda-forge::nibabel
+  - pip:
+    - SimpleITK
+    - s3pipe
