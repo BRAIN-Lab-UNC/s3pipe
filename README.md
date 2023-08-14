@@ -1,5 +1,5 @@
-# [S3pipeline](https://pypi.org/project/sphericalunet/)
-Python-based spherical cortical surface processing tools, including spherical resampling, interpolation, parcellation, registration, atlas construction, etc. It provides fast and accurate cortical surface-based data analysis using deep learning techniques.
+# [S3pipeline](https://pypi.org/project/s3pipe/)
+Python-based spherical cortical surface processing tools, including spherical mapping, resampling, interpolation, parcellation, registration, atlas construction, etc. It provides fast and accurate cortical surface-based data analysis using deep learning techniques.
 
 ## Install
 
@@ -7,25 +7,24 @@ It can be installed from PyPI using:
 
 ```
 conda env create -f environment.yml
-conda activate s3env 
-Then install pytorch from https://pytorch.org/get-started/locally/ with correct gpu/cpu and cuda choices
-Install paraview ***5.10.1*** on Ubuntu 20.04
+conda activate s3env
 ```
+Then install pytorch from https://pytorch.org/get-started/locally/ with correct gpu/cpu and cuda choices.
 
 ## Main tools
-[**I/O vtk file**](https://github.com/zhaofenqiang/SphericalUNetPackage/blob/main/sphericalunet/utils/vtk.py). Python function for reading and writing .vtk surface file. Example code:
+[**I/O vtk file**](https://github.com/BRAIN-Lab-UNC/S3pipe/blob/main/pip_package/s3pipe/utils/vtk.py). Python function for reading and writing .vtk surface file. Example code:
 ```
-from sphericalunet.utils.vtk import read_vtk, write_vtk
+from s3pipe.utils.vtk import read_vtk, write_vtk
 
 surf = read_vtk(file_name)
-# some operations to the surface 
+# Some operations to the surface 
 write_vtk(surf, new_file_name)
 ```
 For matlab users, please refer to this [issue](https://github.com/zhaofenqiang/Spherical_U-Net/issues/3#issuecomment-763334969) and this [repository](https://github.com/Zhengwang-Wu/CorticalSurfaceMetric).
 
-[**Layers**](https://github.com/zhaofenqiang/SphericalUNetPackage/blob/main/sphericalunet/layers.py) provide basic spherical convolution, pooling, upsampling layers for constructing spherical convolutional neural networks.
+[**Layers**](https://github.com/BRAIN-Lab-UNC/S3pipe/tree/main/pip_package/s3pipe/layers) provide basic spherical convolution, pooling, upsampling layers for constructing spherical convolutional neural networks.
 
-[**Models**](https://github.com/zhaofenqiang/SphericalUNetPackage/blob/main/sphericalunet/model.py) provide some baseline spherical convolutional neural networks, e.g., [Spherical U-Net](https://github.com/zhaofenqiang/SphericalUNetPackage/blob/6d6c50fc6d20a0d7a2c09669ff1e9e7c78f82007/sphericalunet/model.py#L92), Spherical SegNet, Spherical VGG, Spherical ResNet, Spherical CycleGAN, etc.
+[**Models**](https://github.com/BRAIN-Lab-UNC/S3pipe/tree/main/pip_package/s3pipe/models) provide some baseline spherical convolutional neural networks, e.g., [Spherical U-Net](https://github.com/zhaofenqiang/SphericalUNetPackage/blob/6d6c50fc6d20a0d7a2c09669ff1e9e7c78f82007/sphericalunet/model.py#L92), Spherical SegNet, Spherical VGG, Spherical ResNet, Spherical CycleGAN, etc.
 
 [**Resample feature**](https://github.com/zhaofenqiang/SphericalUNetPackage/blob/d838ced91b6878d78e81a3350db01fcbb2591286/sphericalunet/utils/interp_numpy.py#L211) on spherical surface to standard icosahedron subdivision spheres. Example code:
 ```
