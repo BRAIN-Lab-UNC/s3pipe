@@ -64,7 +64,7 @@ resampled_label = resample_label(surf['vertices'], template_163842['vertices'], 
 
 [**Rigid surface alignment**](https://github.com/BRAIN-Lab-UNC/S3Reg).
 
-[**Spherical surfae mapping**](https://github.com/BRAIN-Lab-UNC/S3Map) with trained models based on this package.
+[**Spherical surface mapping**](https://github.com/BRAIN-Lab-UNC/S3Map) with trained models based on this package.
 
 [**Surface inflation**](https://github.com/BRAIN-Lab-UNC/s3pipe/blob/main/s3pipe/surface/inflate.py).
 
