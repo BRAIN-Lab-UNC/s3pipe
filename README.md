@@ -62,7 +62,7 @@ resampled_label = resample_label(surf['vertices'], template_163842['vertices'], 
 
 [**Cortical surface registration**](https://github.com/BRAIN-Lab-UNC/S3Reg) with trained models based on this package.
 
-[**Rigid surface alignment**](https://github.com/BRAIN-Lab-UNC/s3pipe/blob/85aa03ffc7a153de217e925c6f522e4614e619bd/s3pipe/surface/s3reg.py#L50). An example code can be found [here]().
+[**Rigid surface alignment**](https://github.com/BRAIN-Lab-UNC/S3Reg).
 
 [**Spherical surfae mapping**](https://github.com/BRAIN-Lab-UNC/S3Map) with trained models based on this package.
 
