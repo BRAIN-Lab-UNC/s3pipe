@@ -50,18 +50,14 @@ Note if you want to run it on GPU, change `interp_numpy` to `interp_torch`.
 
 [**Resample label**](https://github.com/BRAIN-Lab-UNC/s3pipe/blob/85aa03ffc7a153de217e925c6f522e4614e619bd/s3pipe/utils/interp_numpy.py#L446) on spherical surface to standard icosahedron subdivision spheres. Example code:
 ```
-from s3pipe.utils.vtk import read_vtk, write_vtk, resample_label
+from s3pipe.utils.vtk import read_vtk, write_vtk,
+from s3pipe.utils.interp_numpy import resample_label
 from s3pipe.utils.utils import get_sphere_template
 
 template_163842 = get_sphere_template(163842) 
 surf = read_vtk(file)
 resampled_label = resample_label(surf['vertices'], template_163842['vertices'], surf['par_fs_vec'])
 ```
-
-[**Surface inflation**](https://github.com/BRAIN-Lab-UNC/s3pipe/blob/main/s3pipe/surface/inflate.py)
-
-[**Surface and feature smooth**](https://github.com/BRAIN-Lab-UNC/s3pipe/blob/85aa03ffc7a153de217e925c6f522e4614e619bd/s3pipe/surface/prop.py#L17)
-
 [**Cortical surface parcellation**](https://github.com/zhaofenqiang/Spherical_U-Net) with trained models based on this package.
 
 [**Cortical surface registration**](https://github.com/BRAIN-Lab-UNC/S3Reg) with trained models based on this package.
@@ -69,6 +65,10 @@ resampled_label = resample_label(surf['vertices'], template_163842['vertices'], 
 [**Rigid surface alignment**](https://github.com/BRAIN-Lab-UNC/s3pipe/blob/85aa03ffc7a153de217e925c6f522e4614e619bd/s3pipe/surface/s3reg.py#L50). An example code can be found [here]().
 
 [**Spherical surfae mapping**](https://github.com/BRAIN-Lab-UNC/S3Map) with trained models based on this package.
+
+[**Surface inflation**](https://github.com/BRAIN-Lab-UNC/s3pipe/blob/main/s3pipe/surface/inflate.py).
+
+[**Surface and feature smooth**](https://github.com/BRAIN-Lab-UNC/s3pipe/blob/85aa03ffc7a153de217e925c6f522e4614e619bd/s3pipe/surface/prop.py#L17).
 
 [**Chcek folded triangles**]().
 
