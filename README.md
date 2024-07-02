@@ -1,4 +1,4 @@
-# [s3pipeline]()
+# [s3pipeline](https://pypi.org/project/s3pipe/)
 Python-based spherical cortical surface processing tools, including spherical mapping, resampling, interpolation, registration, parcellation, etc. It provides fast and accurate cortical surface-based data analysis using deep learning techniques.
 
 ## Install
